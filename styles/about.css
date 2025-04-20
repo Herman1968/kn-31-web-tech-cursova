@@ -1,0 +1,22 @@
+/* ---------------------- ЗАГОЛОВКИ ТА КОНТЕНТ ---------------------- */
+
+/* Головний заголовок */
+h1 {
+  text-align: center;
+  display: block;
+  margin-bottom: 50px;
+}
+
+/* Секція заголовка контенту */
+.content_heading {
+  text-align: center;
+}
+
+.content_heading p {
+  font-weight: 600;
+}
+
+/* Основний текст у контенті */
+.content > p {
+  margin: 20px 0px;
+}
