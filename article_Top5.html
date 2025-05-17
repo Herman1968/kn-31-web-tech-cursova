@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- Оголошення типу документа HTML5 -->
+<html lang="uk">
+  <!-- Вказуємо, що сторінка має бути на українській мові -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Встановлюємо кодування символів UTF-8 для підтримки українських символів -->
+    <title>Connect</title>
+    <!-- Назва сторінки, яка відображатиметься на вкладці браузера -->
+    <!-- Підключаємо загальні стилі для сайту -->
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <!-- Підключаємо стилі для сторінки новин -->
+    <link rel="stylesheet" href="./styles/news.css" />
+    <link rel="stylesheet" href="./styles/article.css" />
+
+    <!-- Попереднє з'єднання для швидшого доступу до Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Іконка для вкладки браузера (favicon) -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <!-- Мета-тег для адаптивного дизайну на мобільних пристроях -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <!-- Підключаємо іконки Font Awesome для використання піктограм -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Підключаємо шрифт Montserrat з Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Надсилання заявки на підключення інтернету -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="form-container">
+          <h2>Заявка на підключення інтернету</h2>
+          <form id="internetForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Номер телефону:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="^\+?\d{10,15}$"
+            />
+
+            <label for="message">Побажання:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button class="button" type="submit">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Шапка сайту (header) -->
+    <header class="header">
+      <!-- Логотип компанії, при натисканні повертає на головну сторінку -->
+      <a href="./index.html">
+        <img src="./images/logo.png" alt="" class="header_logo" />
+      </a>
+
+      <!-- Головне навігаційне меню -->
+      <nav>
+        <ul>
+          <li><a href="./index.html">Головна</a></li>
+          <li><a href="./about.html">Про нас</a></li>
+          <li><a href="./news.html">Новини</a></li>
+        </ul>
+      </nav>
+
+      <!-- Кнопка для підключення до послуг компанії -->
+      <button class="button connect_button">Підключити</button>
+    </header>
+
+    <!-- Основний блок контенту -->
+    <div class="overflow">
+      <!-- Секція новин -->
+      <section>
+        <img src="./images/speedtest.jpg" alt="" />
+
+        <h1>
+          Connect увійшов у топ-5 найшвидших провайдерів України за результатами
+          Speedtest
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+          voluptatibus earum velit blanditiis? Soluta porro modi qui saepe ab a
+          hic sint ducimus dolorem dolorum, eveniet facilis culpa numquam
+          officiis animi quod temporibus libero suscipit adipisci fugit
+          voluptates. Id quo fuga praesentium? Veniam corporis beatae sit
+          cupiditate at? Minima porro aliquam quod tempore quidem a
+          reprehenderit voluptate magni, temporibus necessitatibus quia minus
+          laboriosam, facilis ratione corporis veritatis possimus ipsam ex optio
+          laudantium quis! Rem est cupiditate quas, magni, qui, ad sunt
+          aspernatur quis mollitia vero dolorum sit illo? Obcaecati in veritatis
+          facilis ducimus quam quidem! Itaque id saepe eaque deserunt.
+        </p>
+      </section>
+    </div>
+
+    <!-- Футер (нижня частина сайту) -->
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_row">
+          <!-- Інформація про компанію -->
+          <div class="footer_info">
+            <img src="./images/logo.png" alt="" class="footer_logo" />
+            <p>
+              Наша компанія прагне забезпечити якісний зв'язок у кожному куточку
+              Львова!
+            </p>
+          </div>
+
+          <!-- Нижнє навігаційне меню -->
+          <nav class="footer_nav">
+            <ul>
+              <li><a href="./index.html">Головна</a></li>
+              <li><a href="./about.html">Про нас</a></li>
+              <li><a href="./news.html">Новини</a></li>
+            </ul>
+          </nav>
+
+          <!-- Контакти компанії -->
+          <div class="footer_contacts">
+            <span>Контакти</span>
+            <ul>
+              <li><a href="tel:+38000000">+380000000</a></li>
+              <li><a href="tel:+38000000">+380000000</a></li>
+              <li><a href="tel:+38000000">+380000000</a></li>
+            </ul>
+          </div>
+
+          <!-- Локація компанії -->
+          <div class="footer_location">Україна, м. Львів, вул. Шевченка</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Підключаємо основний JavaScript файл -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/shared.js"></script>
+  </body>
+</html>

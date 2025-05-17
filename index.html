@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- Оголошення типу документа HTML5 -->
+<html lang="uk">
+  <!-- Вказуємо, що сторінка має бути на українській мові -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Встановлюємо кодування символів UTF-8 для підтримки українських символів -->
+    <title>Connect</title>
+    <!-- Назва сторінки, яка відображатиметься на вкладці браузера -->
+
+    <!-- Підключаємо загальні стилі для сайту -->
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <!-- Підключаємо стилі для головної сторінки -->
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Попереднє з'єднання для швидшого доступу до Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Іконка для вкладки браузера (favicon) -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <!-- Мета-тег для адаптивного дизайну на мобільних пристроях -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <!-- Підключаємо іконки Font Awesome для використання піктограм -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Підключаємо шрифт Montserrat з Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Надсилання заявки на підключення інтернету -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="form-container">
+          <h2>Заявка на підключення інтернету</h2>
+          <form id="internetForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Номер телефону:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="^\+?\d{10,15}$"
+            />
+
+            <label for="message">Побажання:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button class="button" type="submit">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Шапка сайту (header) -->
+    <header class="header">
+      <!-- Логотип компанії, при натисканні повертає на головну сторінку -->
+      <a href="./index.html">
+        <img src="./images/logo.png" alt="" class="header_logo" />
+      </a>
+
+      <!-- Головне навігаційне меню -->
+      <nav>
+        <ul>
+          <li><a href="./index.html">Головна</a></li>
+          <li><a href="./about.html">Про нас</a></li>
+          <li><a href="./news.html">Новини</a></li>
+        </ul>
+      </nav>
+
+      <!-- Кнопка для підключення до послуг компанії -->
+      <button class="button connect_button">Підключити</button>
+    </header>
+
+    <!-- Основний блок контенту -->
+    <div class="overflow">
+      <!-- Секція головного банера (hero) -->
+      <section class="hero">
+        <div>
+          <!-- Зображення для головного банера -->
+          <div class="hero_image">
+            <img
+              src="https://ocdn.eu/pulscms-transforms/1/nLhk9kqTURBXy8zNWUyOTBjZmNlMWUzNmQ3ZTAyNTU5ZDhiM2NmNjAyZi5qcGVnkpUDzQK4AM0T_M0LPpMFzQSwzQJY3gABoTAB"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Інформаційний блок на головному банері -->
+        <div class="hero_info">
+          <h1>Найшвидший інтеренет у Львові!</h1>
+          <p>
+            Підключай вже зараз та отримуй бонуси! Приводь друзів та отримуй
+            знижки!
+          </p>
+        </div>
+      </section>
+
+      <!-- Секція з тарифами -->
+      <section class="tariffs">
+        <h1>Тарифи</h1>
+
+        <!-- Аккордеон для тарифів -->
+        <div class="accordion" id="accordion">
+          <!-- Тарифний план "Гігабіт" -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <span class="accordion-subtitle">Гігабіт</span><br />
+                1000 МБІТ • 259 ГРН/МІС
+              </div>
+
+              <!-- Стрілка для розгортання/згортання контенту -->
+              <div class="accordion-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+            <div class="accordion-body">
+              <p>
+                В даному тарифному плані ви отримуєте інтернет на швидкості до
+                1000 Мбіт/с
+              </p>
+              <button class="button">Підключитися</button>
+            </div>
+          </div>
+
+          <!-- Тарифний план "Гігабіт+ТБ" -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <span class="accordion-subtitle">Гігабіт+ТБ</span><br />
+                1000 МБІТ+ТЕЛЕБАЧЕННЯ • 279 ГРН/МІС
+              </div>
+
+              <!-- Стрілка для розгортання/згортання контенту -->
+              <div class="accordion-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+            <div class="accordion-body">
+              <p>
+                В даному тарифному пакеті ви отримуєте інтернет на швидкості до
+                1000 Мбіт/с та ІНТЕРАКТИВНЕ ТЕЛЕБАЧЕННЯ, що включає більше сотні
+                телеканалів в цифровій якості.
+              </p>
+              <em
+                >Підключення до тарифного плану «Гігабіт+ТБ» чи перехід на
+                тарифний план, доступні лише при наявності технічної
+                можливості.</em
+              >
+              <br /><br />
+              <button class="button">Підключитися</button>
+            </div>
+          </div>
+
+          <!-- Спеціальна пропозиція "Вигідний старт" -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <div class="accordion-title">
+                <span class="accordion-subtitle" style="color: red"
+                  >Вигідний старт</span
+                ><br />
+                1000 МБІТ+ТЕЛЕБАЧЕННЯ • 2600 ГРН/РІК
+              </div>
+
+              <!-- Стрілка для розгортання/згортання контенту -->
+              <div class="accordion-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+            <div class="accordion-body">
+              <p>
+                В даному тарифному пакеті ви отримуєте інтернет на швидкості до
+                1000 Мбіт/с та ІНТЕРАКТИВНЕ ТЕЛЕБАЧЕННЯ за спеціальною ціною
+                2600 грн за 12 місяців.
+              </p>
+              <button class="button">Підключитися</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секція з описом телебачення, яке надається -->
+      <section class="tv-section">
+        <div class="tv-container">
+          <!-- Опис телебачення -->
+          <div class="tv-text">
+            <h2>Телебачення</h2>
+            <p>
+              Для вас доступно понад 180 ліцензійних TV каналів в цифровій
+              якості різноманітної тематики.
+            </p>
+            <ul>
+              <li><i class="fas fa-plus"></i> цифрова якість зображення</li>
+              <li>
+                <i class="fas fa-plus"></i> можливість перегляду програм у
+                записі
+              </li>
+              <li>
+                <i class="fas fa-plus"></i> інтерактивна програма передач
+                телеканалів
+              </li>
+            </ul>
+          </div>
+          <!-- Зображення телевізора -->
+          <div class="tv-image">
+            <img src="./images/tv_image.png" alt="TV Image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Секція "Connect пропонує" -->
+      <section class="suggest">
+        <h1><span>Connect</span> пропонує</h1>
+
+        <!-- Список переваг -->
+        <div class="suggest_items">
+          <article class="suggest_item">
+            <img src="./images/suggest_realiable.svg" alt="" />
+            <div class="suggest_item_info">
+              <span>Доступність</span>
+              <p>
+                Наша мережа побудована з використанням надійного та сучасного
+                обладнання.
+              </p>
+            </div>
+          </article>
+          <article class="suggest_item">
+            <img src="./images/suggest_affordable.svg" alt="" />
+            <div class="suggest_item_info">
+              <span>Лояльність</span>
+              <p>Доступна лінійка тарифних планів дозволяє не переплачувати.</p>
+            </div>
+          </article>
+          <article class="suggest_item">
+            <img src="./images/suggest_loyality.svg" alt="" />
+            <div class="suggest_item_info">
+              <span>Надійність</span>
+              <p>
+                Ми цінуємо кожного абонента та готові прислухатися до ваших
+                побажань.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Футер (нижня частина сайту) -->
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_row">
+          <!-- Інформація про компанію -->
+          <div class="footer_info">
+            <img src="./images/logo.png" alt="" class="footer_logo" />
+            <p>
+              Наша компанія прагне забезпечити якісний зв'язок у кожному куточку
+              Львова!
+            </p>
+          </div>
+
+          <!-- Нижнє навігаційне меню -->
+          <nav class="footer_nav">
+            <ul>
+              <li><a href="./index.html">Головна</a></li>
+              <li><a href="./about.html">Про нас</a></li>
+              <li><a href="./news.html">Новини</a></li>
+            </ul>
+          </nav>
+
+          <!-- Контакти компанії -->
+          <div class="footer_contacts">
+            <span>Контакти</span>
+            <ul>
+              <li><a href="tel:+38000000">+380000000</a></li>
+              <li><a href="tel:+38000000">+380000000</a></li>
+              <li><a href="tel:+38000000">+380000000</a></li>
+            </ul>
+          </div>
+
+          <!-- Локація компанії -->
+          <div class="footer_location">Україна, м. Львів, вул. Шевченка</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Підключаємо основний JavaScript файл -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/shared.js"></script>
+  </body>
+</html>
